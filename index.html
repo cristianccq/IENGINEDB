@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <!-- Metadatos para seleccionar charset y hacer responsive -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+        <!-- Título de la web -->
+        <title>INSIGHT ENGINE</title>
+ 
+        <!-- Injectamos el loader de Google -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 
+        <!-- Injectamos el ficheros Javascript y hoja de estilos de nuesto Dashboard -->
+        <script type="text/javascript" src="chart.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+ 
+    <body>
+        <!-- Título superior -->
+        <h1>INSIGHT ENGINE DASHBOARD</h1>
+ 
+        <!-- Grid con todos los paneles -->
+        <div class="dashboard-wrapper">
+            <div id='p1' class='panel'><h2>Densidad por categoria</h2> 
+                <select id="thedropdown_p1" onchange="drawChartP1()">
+                 <option value="sepal.length">sepal_length</option>
+                 <option value="sepal.width">sepal_width</option>
+                 <option value="petal.length">petal_length</option>
+                 <option value="petal.width">petal_width</option>
+                </select> 
+                <div id='p1Chart'></div> 
+            </div>
+            <div id='m2' class='panel'><h2>Scatter </h2>
+             <select id="thedropdown" onchange="drawChartM2()">
+                <option value="1">sepal_length</option>
+                 <option value="2">sepal_width</option>
+                 <option value="3">petal_length</option>
+                 <option value="4">petal_width</option>
+             </select>
+             <select id="thedropdown2" onchange="drawChartM2()">
+                <option value="1">sepal_length</option>
+                 <option value="2">sepal_width</option>
+                 <option value="3">petal_length</option>
+                 <option value="4">petal_width</option>
+             </select>
+             <div id='m2Chart'></div> 
+            </div>
+
+            <div id='m3' class='panel'><h2>Distribuciones</h2> 
+                <select id="thedropdown_m3" onchange="drawChartM3()">
+                 <option value="1">sepal_length</option>
+                 <option value="2">sepal_width</option>
+                 <option value="3">petal_length</option>
+                 <option value="4">petal_width</option>
+                </select>
+                <div id='m3Chart'></div> 
+            </div>
+
+            <div id='p2' class='panel'><h2>Sub panel 1</h2> <div id='p2Chart'></div> </div>
+            <div id='p3' class='panel'><h2>Sub panel 2</h2> <div id='p3Chart'></div> </div>
+            <div id='p4' class='panel'><h2>Sub panel 3</h2> <div id='p4Chart'></div> </div>
+            <div id='p5' class='panel'><h2>Bottom panel</h2> <div id='p5Chart'></div> </div>
+        </div>
+ 
+        <!-- Pié de página -->
+        <div class='bottom'><a target='_blank' href='https://www.albertcoronado.com'>Made with love by CQ</a></div>
+    </body>
+</html>
